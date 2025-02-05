@@ -50,7 +50,13 @@ form button[type="submit"]:hover{
     text-align: center;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, margin(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto; 
+    padding: 40px;
+    place-items: center;
+
 }
 .recipe{
     background-color: #ffff;
@@ -58,23 +64,26 @@ form button[type="submit"]:hover{
     flex-direction: column;
     color: #000;
     border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(78,73,73,0.1) -5px -5px 10px rgba(34, 34, 0.5, );
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34, 0.5);
     cursor: pointer;
     max-width: 350px;
 
 }
 .recipe img{
-    height: 300px;
+    height: 200px;
 }
 
    
-@media screen and (max-width:600px) {
-    header nav{
+@media screen and (max-width: 600px) {
+    header nav {
         flex-direction: column;
+        align-items: center;
     }
-    header nav form{
-         width: 80%;
-         margin-top: 20px;
+    header nav form {
+        width: 90%;
+        margin-top: 20px;
     }
-    
+    .recipe-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
