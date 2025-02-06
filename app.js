@@ -15,18 +15,27 @@ const fetchRecipes = async (query) => {
 
 searchBox.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const value = inputval.value;
+  const value = inputval.value.trim();
+  
+  // Check for empty search input
+  if (!value) {
+    recipeContainer.innerHTML = '<p>Please enter a recipe name.</p>';
+    return;
+  }
+
   const data = await fetchRecipes(value);
 
   if (data && data.meals) {
-    recipeContainer.innerHTML = '';
+    recipeContainer.innerHTML = '';  // Clear previous results
     data.meals.forEach(meal => {
       const mealElement = document.createElement('div');
-      mealElement.className = 'meal';
+      mealElement.className = 'recipe';  // Fix class name here
       mealElement.innerHTML = `
         <h2>${meal.strMeal}</h2>
         <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-        <p>${meal.strInstructions}</p>
+        <p>Area: ${meal.strArea}</p>
+        <p>Category: ${meal.strCategory}</p>
+        <a href="https://www.themealdb.com/meal.php?c=${meal.idMeal}" target="_blank">View Full Recipe</a>
       `;
       recipeContainer.appendChild(mealElement);
     });
