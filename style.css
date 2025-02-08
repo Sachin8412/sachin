@@ -5,12 +5,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-    background-color: #2b1d0f;
+    background-color: #6e6a77;
     color: #ffff;
    
 }
 header nav{
-    background-color: #212121;
+    background-color: #517a5b;
     padding: 20px;
     display: flex;
     justify-content: space-between;
