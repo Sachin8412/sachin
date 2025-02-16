@@ -16,7 +16,7 @@ const fetchRecipes = async (query) => {
 searchBox.addEventListener('submit', async (e) => {
   e.preventDefault();
   const value = inputval.value.trim();
-  
+
   // Check for empty search input
   if (!value) {
     recipeContainer.innerHTML = '<p>Please enter a recipe name.</p>';
@@ -29,7 +29,7 @@ searchBox.addEventListener('submit', async (e) => {
     recipeContainer.innerHTML = '';  // Clear previous results
     data.meals.forEach(meal => {
       const mealElement = document.createElement('div');
-      mealElement.className = 'recipe';  // Fix class name here
+      mealElement.className = 'recipe';  // Set class name correctly once
       mealElement.innerHTML = `
         <h2>${meal.strMeal}</h2>
         <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
