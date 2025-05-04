@@ -1,89 +1,178 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-    background-color: #6e6a77;
-    color: #ffff;
-   
+background-color: #6e6a77;
+color: #ffff;
+
 }
 header nav{
-    background-color: #517a5b;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
+background-color: #517a5b;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1;
 }
 header nav h1{
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+font-size: 26px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
 }
 header nav form{
-    display: flex;
-    justify-content: center;
-    
+display: flex;
+justify-content: center;
+
 }
 form input[type="text"]{
-    flex-grow: 1;
-    margin-right: 10px;
+flex-grow: 1;
+margin-right: 10px;
 }
 form input[type="text"],button[type="submit"]{
-    border: none;
+border: none;
 font-size: 18px;
 padding: 10px;
 border-radius:4px;
 }
 form button[type="submit"]{
-    background-color: orangered;
-    color: white;
-    cursor: pointer;
+background-color: orangered;
+color: white;
+cursor: pointer;
 }
 form button[type="submit"]:hover{
-    background-color: #ff5cff;
+background-color: #ff5cff;
 }
 .recipe-container{
-    text-align: center;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    grid-gap: 40px;
-    width: 80%;
-    margin: 10px auto; 
-    padding: 40px;
-    place-items: center;
+text-align: center;
+margin-top: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+grid-gap: 40px;
+width: 80%;
+margin: 10px auto; 
+padding: 40px;
+place-items: center;
 
 }
 .recipe{
-    background-color: #ffff;
-    display: inline-flex;
-    flex-direction: column;
-    color: #000;
-    border-radius: 6px;
-    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34, 0.5);
-    cursor: pointer;
-    max-width: 350px;
+background-color: #ffff;
+display: inline-flex;
+flex-direction: column;
+color: #000;
+border-radius: 6px;
+box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34, 0.5);
+cursor: pointer;
+max-width: 350px;
 
 }
 .recipe img{
-    height: 200px;
+height: 200px;
+
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  footer .footer-column {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  footer .footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  footer .footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+  }
+
+  footer .footer-column a:hover {
+    color: #fff;
+  }
+
+  footer .social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  footer .social-icons a:hover {
+    color: #fff;
+  }
+
+  footer .newsletter form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+  }
+
+  footer .newsletter form button {
+    padding: 10px;
+    border: none;
+    background-color: #f39c12;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  footer .newsletter form button:hover {
+    background-color: #e67e22;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    footer .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    footer .footer-column {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    footer .newsletter form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
-   
+
 @media screen and (max-width: 600px) {
-    header nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    header nav form {
-        width: 90%;
-        margin-top: 20px;
-    }
-    .recipe-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+header nav {
+    flex-direction: column;
+    align-items: center;
+}
+header nav form {
+    width: 90%;
+    margin-top: 20px;
+}
+.recipe-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 }
